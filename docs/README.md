@@ -250,6 +250,6 @@ View server logs:
 
 ## Version Information
 
-Current Version: **v7.0.0**
+Current Version: **v1.0.0**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
