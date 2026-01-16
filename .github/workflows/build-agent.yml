@@ -1,0 +1,36 @@
+name: Build Agent
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        cd agent
+        pip install -r requirements.txt
+        pip install pyinstaller
+    
+    - name: Build executable
+      run: |
+        cd agent
+        python -m PyInstaller --onefile --console --name agent --add-data ".env.embedded;." src/main.py --clean -y
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: agent-windows
+        path: agent/dist/agent.exe
