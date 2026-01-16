@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
 [![Python Version](https://img.shields.io/badge/python-%3E%3D3.8-blue)](https://www.python.org/)
-[![GitHub release](https://img.shields.io/badge/release-v7.0.0-blue)](https://github.com/coff33ninja/remote-pc-agent/releases)
+[![GitHub release](https://img.shields.io/badge/release-v1.0.0-blue)](https://github.com/coff33ninja/remote-pc-agent/releases)
 
 AI-powered remote PC control system for Windows machines with natural language command execution via Google Gemini.
 
